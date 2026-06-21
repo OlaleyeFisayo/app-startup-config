@@ -43,6 +43,7 @@ export default antfu(
       "ts/consistent-type-definitions": ["error", "type"],
       "ts/no-unsafe-assignment": "off",
       "ts/no-unsafe-call": "off",
+      "ts/no-redeclare": "off",
 
       // general
       "no-console": "warn",
