@@ -7,6 +7,7 @@ Built on [`@antfu/eslint-config`](https://github.com/antfu/eslint-config).
 ```ts
 // eslint.config.mjs
 import antfu from "@antfu/eslint-config";
+import tanstackPluginQuery from "@tanstack/eslint-plugin-query";
 
 export default antfu(
   {
@@ -27,7 +28,13 @@ export default antfu(
     ],
   },
   {
+    // tanstack query integration
+    plugins: { "@tanstack/query": tanstackPluginQuery },
+
     rules: {
+      // tanstack query integration
+      ...tanstackPluginQuery.configs.recommended.rules,
+
       // pnpm settings
       "pnpm/yaml-enforce-settings": "off",
 
