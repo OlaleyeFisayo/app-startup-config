@@ -44,6 +44,7 @@ export default antfu(
       "ts/no-unsafe-assignment": "off",
       "ts/no-unsafe-call": "off",
       "ts/no-redeclare": "off",
+      "node/prefer-global/process": "off",
 
       // general
       "no-console": "warn",
@@ -79,50 +80,3 @@ type AntfuConfig = {
   ignores: string[];                 // glob patterns to exclude from linting
 };
 ```
-
-## Rules
-
-### pnpm
-
-| Rule | Value | Why |
-|------|-------|-----|
-| `pnpm/yaml-enforce-settings` | `off` | prevents auto-fixing `trustPolicy` in `pnpm-workspace.yaml` |
-
-### File Style
-
-| Rule | Value | Why |
-|------|-------|-----|
-| `object-curly-newline` | `error` — multiline, min 2 props | forces multi-prop objects onto multiple lines |
-| `style/function-paren-newline` | `error` — min 2 args | newline when function has 2+ args |
-| `style/array-bracket-newline` | `error` — min 2 items | newline when array has 2+ items |
-| `style/array-element-newline` | `error` — min 2 items | each element on its own line |
-| `style/function-call-argument-newline` | `error` — always | every call argument on its own line |
-
-### TypeScript
-
-| Rule | Value | Why |
-|------|-------|-----|
-| `perfectionist/sort-imports` | `error` | enforces sorted import order |
-| `ts/consistent-type-definitions` | `error` — `type` | prefer `type` over `interface` |
-| `ts/no-unsafe-assignment` | `off` | relaxed for React component props |
-| `ts/no-unsafe-call` | `off` | relaxed for React component calls |
-
-### General
-
-| Rule | Value | Why |
-|------|-------|-----|
-| `no-console` | `warn` | flag leftover debug logs |
-| `antfu/no-top-level-await` | `off` | allow top-level await (Next.js server components) |
-| `node/no-process-env` | `error` | use env abstraction, not raw `process.env` |
-
-### File Naming
-
-| Rule | Value | Why |
-|------|-------|-----|
-| `unicorn/filename-case` | `error` — `kebabCase` | all files in kebab-case; `README.md` excluded |
-
-### React
-
-| Rule | Value | Why |
-|------|-------|-----|
-| `style/jsx-max-props-per-line` | `error` — max 1 | one JSX prop per line |
