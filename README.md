@@ -51,13 +51,13 @@ export default antfu(
       "ts/no-unsafe-assignment": "off",
       "ts/no-unsafe-call": "off",
       "ts/no-redeclare": "off",
-      "node/prefer-global/process": "off",
       "ts/no-misused-promises": "off",
 
       // general
       "no-console": "warn",
       "antfu/no-top-level-await": "off",
       "node/no-process-env": "error",
+      "node/prefer-global/process": "off",
 
       // file naming
       "unicorn/filename-case": ["error", { case: "kebabCase", ignore: ["README.md"] }],
