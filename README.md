@@ -52,6 +52,7 @@ export default antfu(
       "ts/no-unsafe-call": "off",
       "ts/no-redeclare": "off",
       "node/prefer-global/process": "off",
+      "ts/no-misused-promises": "off",
 
       // general
       "no-console": "warn",
